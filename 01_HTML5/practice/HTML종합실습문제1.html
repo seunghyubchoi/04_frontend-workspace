@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 종합 실습 문제1</title>
+</head>
+<body>
+    <form action="test.do">
+        <div style="margin-top: 5%; margin-bottom: 5%;">
+            고객명 : <input type="text" name="name" required> 
+            <br><br>
+            전화번호 : <input type="phone" name="phone" required>
+            <br><br>
+            E-mail : <input type="email" name="email" required>
+        </div>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <input type="radio" id="radioS" name="size" value="small" required> 
+            <label for="radioS">Small</label>
+            <br><br>
+            <input type="radio" id="radioM" name="size" value="medium" required> 
+            <label for="radioM">Medium</label>
+            <br><br>
+            <input type="radio" id="radioL" name="size" value="large" required>
+            <label for="radioL">Large</label>
+            <br><br>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <input type="checkbox" id="checkboxB" name="topping" value="bacon" required>
+            <label for="checkboxB">베이컨</label>
+            <br><br>
+            <input type="checkbox" id="checkboxC" name="topping" value="cheese" required>
+            <label for="checkboxC">치즈</label>
+            <br><br>
+            <input type="checkbox" id="checkboxO" name="topping" value="onion" required>
+            <label for="checkboxO">양파</label>
+            <br><br>
+            <input type="checkbox" id="checkboxM" name="topping" value="mushroom" required>
+            <label for="checkboxM">버섯</label>
+            <br><br>
+        </fieldset>
+        <br>
+        희망 배송 시간 : <input type="time" name="orderTime" required>
+        <br>
+        <br>
+        배송 시 요청사항 : <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        <br><br>
+        <input type="submit" value="주문하기"> 
+    </form>
+</body>
+</html>
