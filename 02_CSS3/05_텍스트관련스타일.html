@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .spelling-error {
+            text-decoration: line-through;
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: red;
+        }
+
+        .shadow {
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        #ts1 {
+
+            color: orangered;
+            text-shadow: 5px 5px
+                /*번짐정도 생략시 기본적으로는 엄청나게 선명한 그림자, 색상 생략시 글자색깔 그림자로*/
+            ;
+            text-shadow: 5px -5px 5px yellow;
+        }
+
+        #ts2 {
+            color: white;
+            text-shadow: 0px 0px 10px yellowgreen;
+        }
+
+        #ts3 {
+            text-shadow: 0px 0px 4px gray, 0px -5px 4px yellow, 0px -10px 8px orange, 0px -15px 15px orangered, 0px -25px 20px red;
+        }
+
+        #tt1 {
+            text-transform: uppercase;
+        }
+
+        #tt2 {
+            text-transform: lowercase;
+        }
+
+        #tt3 {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>color : 색을 입힐 때 사용</h3>
+    <pre>
+        선택자 { 
+            color | RGBA  | HSLA 
+        }
+    </pre>
+    <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+    <p style="color: blueviolet;">This is America</p>
+    <p style="color:rgba(255,0,0,0.5);">This is Korea</p>
+    <!-- Hue : 색상 Saturation : 채도 Lightness : 명도 Alpha : 불투명도 -->
+    <p style="color:hsla(2,80%,88%,0.5);">Red paragraph text</p>
+    <p style="background-color:rgba(255,0,0,0.3);">Red</p>
+    <p style="background-color:hsla(120,100%,75%,0.3);">Light green</p>
+    <p><a href="http://www.naver.com">네이버</a></p>
+
+
+
+    <h3>text- decoration : 텍스트에 줄을 긋거나 없앨때 사용</h3>
+    <pre>
+        선택자 { 
+            text-transform : text-decoration-line | text-decoration-style | text-decoration-color
+        }
+        </pre>
+
+    <h4>
+        <예시>
+    </h4>
+    <p>This is some <u class="spelling-error">mispeled</u> text.</p>
+
+
+
+    <h3>text-transform : 영문 텍스트의 대소문자 변환시 사용</h3>
+    <pre>
+        선택자 { 
+            text-transform : uppercase | lowercase | capitalize
+        }
+        </pre>
+
+    <ol>
+        <li id="tt1">uppercase : 모든 영문자 다 대문자로</li>
+        <li id="tt2">LOWERCASE : 모든 영문자 다 소문자로</li>
+        <li id="tt3">capitalize : 영문자 첫 단어 대문자로</li>
+    </ol>
+
+    <hr>
+
+    <h3>text-shadow : 텍스트에 그림자 효과를 줄 때 사용</h3>F
+    <pre>
+        선택자 {
+            text-shadow : (가로거리)x (세로거리)y [번짐정도] [색상] 
+        }
+    </pre>
+    <!-- div span 3 개 클래스명 : shadow 아이디 : ts1,2,3 -->
+    <!-- div>span.shadow#ts*3 -->
+
+    <div><span class="shadow" id="ts1">html</span> <br><br><br>
+        <span class="shadow" id="ts2">html</span> <br><br><br>
+        <span class="shadow" id="ts3">html</span>
+    </div>
+
+    <hr>
+
+    <h3>text-align : 텍스트를 정렬할 때 사용</h3>
+    <pre>
+    선택자 { 
+        text-align : left(기본값) | justify(양쪽 정렬) | right | center
+    }
+    </pre>
+
+
+    <!-- (h4+p)*4 -->
+    <h4>왼쪽정렬(기본값)</h4>
+    <p style="text-align: left;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, obcaecati molestiae amet beatae, doloremque
+        ipsum accusantium vero ex nemo quos,
+    </p>
+    <h4>양쪽정렬</h4>
+    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quod explicabo
+        voluptas, nisi quos velit, ab vel
+    </p>
+    <h4>오른쪽정렬</h4>
+    <p style="text-align: right;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perspiciatis, odit
+        alias dolores animi ut doloribus magnam 
+    </p>
+    <h4>중앙정렬</h4>
+    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ad laudantium
+        beatae perspiciatis vero
+        dignissimos dolores voluptatem provident 
+    </p>
+
+    <hr>
+
+    <h3>line-height : 줄 간격 조정할 때 사용</h3>
+    <pre>
+    선택자 {
+        line-height : normal | px | em | % 
+    }    
+</pre>
+    <h4>px 고정 단위 간격</h4>
+    <p style="line-height: 25px">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia sunt, pariatur qui eum officiis alias saepe
+        quis? Nobis esse necessitatibus numquam, dolorum praesentium velit, 
+    </p>
+    <h4>em 가변 단위 간격</h4>
+    <p style="line-height: 5em">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia sunt, pariatur qui eum officiis alias saepe
+        quis? Nobis esse necessitatibus numquam, dolorum praesentium velit, 
+    </p>
+    <h4>% 배율 단위 간격</h4>
+    <p style="line-height: 250%;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum similique soluta doloribus sunt.
+        Necessitatibus, nisi, numquam rerum minus perferendis voluptatibus
+    </p>
+
+</body>
+
+</html>
