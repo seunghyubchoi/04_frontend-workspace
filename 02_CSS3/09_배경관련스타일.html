@@ -35,9 +35,28 @@
         #div3{
             background-clip: content-box;
         }
-        #div4{
-            margin-top: 60px;
-            margin-bottom: 30px;
+        #test {
+            border: 1px solid black;
+            width: 70%;
+            height: 800px;
+            background-image: url(resources/image/bgsample.PNG);
+            /* 디폴트가 반복 */
+            background-repeat: repeat; /* 얘가 기본 값*/
+            background-repeat: repeat-x; /*가로로 repeat*/
+            background-repeat: repeat-y; /*y축 repeat*/
+            background-repeat: no-repeat; /*사진 크기 만큼만 한 번 나오고 반복 x*/
+            background-size: auto; /*size 기본값 = auto*/
+            background-size: contain; /*구획 가로 길이에 맞게 사진이 채워짐*/
+            background-size: cover; /*구획 전체 크기에 맞게 꽉꽉 채워짐 */
+            background-size: 100px 200px; 
+            background-size: 50% 50%; /*div의 50% 50%의 사이즈*/
+            background-position: left top; /*기본 값*/
+            background-position: right top; /*div의 오른쪽 상단에 위치함*/
+            background-position: right bottom; /*div의 우측 하단에 위치함*/
+            background-position: left bottom; /*div의 좌측 하단에 위치함*/
+            background-position: center center; /*div의 중앙에 위치함*/
+            background-attachment: scroll; /*기본 값*/
+            background-attachment: fixed;
         }
     </style>
 </head>
@@ -70,6 +89,23 @@
     <div class="div-test" id="div3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laboriosam quasi itaque unde in iste amet
         tempore est hic, deleniti ea, quidem animi esse ipsa voluptatibus accusamus repudiandae! Tempora, modi?
+    </div>
+
+    <hr>
+
+    <h3>배경 이미지 테스트</h3>
+    <pre>
+    선택자 {
+        background-image:url("이미지 경로")
+        background-repeat | repeat-x | repeat-y | no-repeat
+        background-size:auto | contain | cover | px px | % % 
+        background-position:좌/우/가운데 위/아래/가운데| px px | % %
+        backgroud-attatchment: scroll | fixed
+    }
+    </pre>
+    <!-- #test 하면 기본적으로 div -->
+    <div id="test">
+
     </div>
 </body>
 
