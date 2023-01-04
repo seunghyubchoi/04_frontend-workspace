@@ -1,80 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹 문서 구조 상세</title>
     <style>
-        div{
+        div {
             box-sizing: border-box;
             border: 1px solid red;
         }
-        .wrap{
+
+        .wrap {
             position: relative;
             margin: auto;
             width: 1000px;
             height: 800px;
         }
 
-        .header, .footer{
+        .header,
+        .footer {
             height: 20%;
         }
 
-        .header>div, .container>div  {
+        .header>div,
+        .container>div {
             float: left;
             height: 100%
         }
 
-        #h1 {width: 25%;}
-        #h2 {width: 55%;}
-        #h3 {width: 20%;}
-
-
-        .navigator{
-            height: 5%;
-            position: fixed;
-            top: 0;
+        #h1 {
+            width: 25%;
         }
 
-        .navigator>div, .footer>div{
+        #h2 {
+            width: 55%;
+        }
+
+        #h3 {
+            width: 20%;
+        }
+
+
+        .navigator {
+            height: 5%;
+            width: 100%;
+           
+        }
+
+        .navigator>div,
+        .footer>div {
             height: 100%;
             float: left;
         }
 
 
-        #n1, #n2{
+        #n1,
+        #n2 {
             width: 50%;
             position: relative;
-            
-            
+
+
         }
 
-        #n1>ul, #n2>ul {
+        #n1>ul,
+        #n2>ul {
             position: relative;
-            
+
         }
-        #n1>ul>li, #n2>ul>li{
+
+        #n1>ul>li,
+        #n2>ul>li {
             float: left;
             margin-left: 5%;
             list-style-type: none;
             padding-bottom: 3%;
-            
-            
+
+
         }
-        .container{
+
+        .container {
             height: 55%;
         }
 
 
 
-        #c1{width: 20%;}
-        #c2{width: 50%;}
-        #c3{width: 30%;}
+        #c1 {
+            width: 20%;
+        }
 
+        #c2 {
+            width: 50%;
+        }
 
+        #c3 {
+            width: 30%;
+        }
     </style>
 </head>
+
 <body>
     <div class="wrap">
         <div class="header">
@@ -83,25 +108,8 @@
             <div id="h3"></div>
         </div>
         <div class="navigator">
-            <div id="n1">
-                <ul>
-                    <li>메일</li>
-                    <li>카페</li>
-                    <li>블로그</li>
-                    <li>지식인</li>
-                    <li>쇼핑그</li>
-                </ul>
-            </div>
-            <div id="n2">
-                <ul>
-                    <li>사전</li>
-                    <li>뉴스</li>
-                    <li>증권</li>
-                    <li>부동산</li>
-                    <li>지도</li>
 
-                </ul>
-            </div>
+
 
         </div>
         <div class="container">
@@ -126,7 +134,7 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br> <br>
     <br>
     <br>
     <br>
@@ -137,7 +145,7 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br> <br>
     <br>
     <br>
     <br>
@@ -148,7 +156,7 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br> <br>
     <br>
     <br>
     <br>
@@ -159,7 +167,7 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br> <br>
     <br>
     <br>
     <br>
@@ -170,7 +178,7 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br> <br>
     <br>
     <br>
     <br>
@@ -181,7 +189,7 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br> <br>
     <br>
     <br>
     <br>
@@ -192,7 +200,7 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br> <br>
     <br>
     <br>
     <br>
@@ -205,4 +213,5 @@
     <br>
     <br>
 </body>
+
 </html>
