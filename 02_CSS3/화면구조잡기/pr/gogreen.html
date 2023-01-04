@@ -11,33 +11,39 @@
         form,
         input {
             box-sizing: border-box;
-           
+            /* border: 1px solid; */
         }
 
         #wrap {
             width: 1000px;
-            ;
             height: 800px;
             margin: auto;
         }
 
-
-
-        #header {
-            height: 20%;
+        a {
+            font-size: 15px;
         }
 
-        #header_1 {
+        p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        #header {
+            height: 15%;
+        }
+
+        #header_1,
+        #header_3 {
             width: 20%;
             height: 100%;
         }
 
         #header_1_img {
-            padding: 15% 0 0% 10%;
+            padding: 15%;
         }
 
         #header_1_img img {
-
             width: 80%;
             height: 80%;
         }
@@ -48,16 +54,8 @@
             height: 100%;
         }
 
-
-
         #header_2 {
             width: 60%;
-            height: 100%;
-
-        }
-
-        #header_3 {
-            width: 20%;
             height: 100%;
         }
 
@@ -65,31 +63,25 @@
             float: left;
         }
 
-
         #navigator {
             background-color: rgb(71, 187, 71);
             height: 5%;
             width: 100%;
-
         }
-
 
         #navi {
             margin: 0;
             padding: 0;
+            padding-top: 3px;
             list-style-type: none;
             height: 100%;
-
         }
 
         #navi>li {
             height: 100%;
-            /* border: 1px solid blue; */
             width: 25%;
             text-align: center;
             float: left;
-
-
         }
 
         #navi a {
@@ -101,155 +93,88 @@
             line-height: 35px;
             color: aliceblue;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 17px;
 
         }
+
         #navi a:hover {
             color: rgb(5, 70, 5);
         }
 
         #content {
-            height: 55%;
+            height: 65%;
             text-align: center;
-            padding: 10px 10px;
+            padding: 10px 10px 0px 10px;
 
-        }
-
-        #content img {
-            width: 100%;
-            height: 100%;
-            
         }
 
         #content p {
             height: 100%;
-            line-height: 5px;
+
         }
 
         #content_1 {
-            width: 20%;
+            width: 15%;
             height: 100%;
-            
+
         }
 
         #content_1_img {
-            
             height: 100%;
         }
 
         #content_2 {
-            width: 50%;
+            width: 60%;
             height: 100%;
-            padding: 0 10px;
-        }
-
-        #content_2 {
-            padding-bottom: 10px;
-
+            padding: 0 5px;
+            padding-top: 5px;
         }
 
         #content_3 {
-            width: 30%;
+            width: 25%;
             height: 100%;
         }
 
         #content>div {
             float: left;
-            
         }
 
         #content_2_top {
             height: 50%;
-            
         }
 
-        #content_2_top_left {
-            width: 50%;
-            height: 100%;
-           
-            float: left;
-
-        }
-
-        #content_2_top_left_img {
-            width: 100%;
-            padding: 5px;
-            height: 80%;
-        }
-
-        #content_2_top_left_memo {
-
-            padding: 5px;
-            height: 20%;
-        }
-
-        #content_2_top_right {
-            width: 50%;
-            height: 100%;
-           
-            float: left;
-        }
-
-        #content_2_top_right_memo {
-
-            padding: 5px;
-            height: 20%;
-        }
-
-        #content_2_top_right_img {
-            width: 100%;
-            padding: 5px;
-            height: 80%;
-        }
-
-
-        #content_2_bottom {
-            height: 50%;
-           
-        }
-
+        #content_2_top_left,
         #content_2_bottom_left {
             width: 50%;
             height: 100%;
-            padding: 5px;
+            padding-right: 5px;
             float: left;
         }
 
-        #content_2_bottom_left_img {
-            width: 100%;
-            padding: 5px;
-            height: 80%;
-        }
-
-        #content_2_bottom_left_memo {
-
-            padding: 5px;
-            height: 20%;
-        }
-
+        #content_2_top_right,
         #content_2_bottom_right {
             width: 50%;
             height: 100%;
-            padding: 5px;
+            padding-left: 5px;
             float: left;
         }
 
+        #content_2_top_left_img,
+        #content_2_top_right_img,
+        #content_2_bottom_left_img,
         #content_2_bottom_right_img {
             width: 100%;
             padding: 5px;
             height: 80%;
         }
 
-        #content_2_bottom_right_memo {
-
-            padding: 5px;
-            height: 20%;
+        #content_2_bottom {
+            height: 50%;
         }
 
         #footer {
-            height: 20%;
+            height: 15%;
         }
-
 
         #content_3_signUp {
             width: 100%;
@@ -257,14 +182,7 @@
             padding-top: 5px;
         }
 
-        #login_form {
-
-            width: 100%;
-            height: 100%;
-        }
-
         #login_form_input {
-
             width: 100%;
             height: 70%;
         }
@@ -275,21 +193,26 @@
             float: left;
         }
 
-
-
         #login_input_btn>input {
             height: 100%;
         }
-
 
         #login_input_id_pwd {
             width: 65%;
             height: 100%;
         }
 
+        #login_input_id_pwd>input {
+            margin: 0;
+            width: 100%;
+            height: 50%;
+            font-size: 13px;
+        }
+
         #login_input_btn {
             width: 35%;
-            height: 100%;
+            height: 90%;
+            padding-top: 5px;
         }
 
         #login_for_etc a {
@@ -301,36 +224,21 @@
         #content_3_ad {
             width: 100%;
             height: 50%;
-
+            padding-top: 10px;
         }
 
-        #content_3_ad_img {
+        #login_form,
+        #content img,
+        #content_3_ad_img,
+        #content_3_message_img,
+        #footer_img img {
             width: 100%;
-
             height: 100%;
         }
 
         #content_3_message {
             width: 100%;
             height: 30%;
-            
-        }
-
-        #content_3_message_img {
-            width: 100%;
-
-            height: 100%;
-        }
-
-        #footer_img {
-
-            height: 100%;
-            padding-top: 30px;
-        }
-
-        #footer_img img {
-            width: 100%;
-            height: 100%;
         }
     </style>
 </head>

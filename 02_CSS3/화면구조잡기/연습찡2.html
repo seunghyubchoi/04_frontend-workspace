@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            background-color: rgba(255, 0, 0, .5);
+            font: 12px/1.6 verdana, sans-serif;
+
+        }
+
+        .box::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .area {
+            position: relative;
+            width: 800px;
+            margin: 0 auto;
+            border: 5px dashed red;
+        }
+
+        .a {
+            position: relative;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            background-color: rgba(255, 0, 0, .8);
+        }
+
+        .b {
+            position: relative;
+            left: 50px;
+            top: 50px;
+            z-index: 3;
+            background-color: rgba(0, 255, 0, .8);
+        }
+
+        .c {
+            position: relative;
+            left: 100px;
+            top: 100px;
+            z-index: 2;
+            background-color: rgba(0, 0, 255, .8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="area">
+        <div class="box a">
+            A Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit reiciendis minima aliquam quos
+            recusandae
+            laboriosam ducimus aperiam enim, eos earum perferendis quasi. Dolorem dolorum, expedita aperiam qui eum
+            nobis
+            exercitationem.
+
+        </div>
+        <div class="box b">
+            B Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit reiciendis minima aliquam quos
+            recusandae
+            laboriosam ducimus aperiam enim, eos earum perferendis quasi. Dolorem dolorum, expedita aperiam qui eum
+            nobis
+            exercitationem.
+
+        </div>
+        <div class="box c">
+            C Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit reiciendis minima aliquam quos
+            recusandae
+            laboriosam ducimus aperiam enim, eos earum perferendis quasi. Dolorem dolorum, expedita aperiam qui eum
+            nobis
+            exercitationem.
+
+        </div>
+    </div>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aut. Nobis, repellat eligendi quasi
+        facilis,
+        libero in id necessitatibus cupiditate beatae doloremque praesentium assumenda, expedita magnam voluptate
+        sequi
+        voluptates debitis!
+        Voluptatibus quaerat commodi modi est molestiae, asperiores, vitae nobis repellendus veniam delectus, odio
+        ipsa
+        accusantium in alias eum quos sint nisi enim aut iure iste quisquam! Assumenda explicabo doloremque labore?
+        Atque optio quisquam error consectetur deleniti labore asperiores nisi magnam voluptate quia! Iusto
+        repudiandae
+        veniam expedita sequi dolorum vitae voluptates? Ex, illum odit ratione consectetur voluptatem pariatur nam
+        temporibus esse.
+    </p>
+
+</body>
+
+</html>

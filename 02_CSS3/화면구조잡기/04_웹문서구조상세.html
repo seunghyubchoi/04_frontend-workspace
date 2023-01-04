@@ -19,6 +19,14 @@
             height: 800px;
         }
 
+        .container {
+            height: 55%;
+        }
+
+        .navigator{
+            height: 5%;
+        }
+
         .header,
         .footer {
             height: 20%;
@@ -44,24 +52,35 @@
 
 
         .navigator {
-            height: 5%;
+            position: relative;
+            top: 0;
             width: 100%;
-           
+        }
+        .navList{
+            position: relative;
+            top: 0;
+            height: 100%;
+            background-color: aqua;
         }
 
-        .navigator>div,
-        .footer>div {
-            height: 100%;
-            float: left;
-        }
+
 
 
         #n1,
         #n2 {
             width: 50%;
-            position: relative;
+        }
 
-
+        #n1{
+            position: absolute;
+            left: 0;
+            height: 100%;
+           
+        }
+        #n2{
+            position: absolute;
+            right: 0;
+            height: 100%;
         }
 
         #n1>ul,
@@ -80,9 +99,7 @@
 
         }
 
-        .container {
-            height: 55%;
-        }
+
 
 
 
@@ -97,6 +114,11 @@
         #c3 {
             width: 30%;
         }
+
+        .footer>div {
+            height: 100%;
+            float: left;
+        }
     </style>
 </head>
 
@@ -108,8 +130,12 @@
             <div id="h3"></div>
         </div>
         <div class="navigator">
-
-
+            <div class="navList">
+                <div id="n1">
+                </div>
+                <div id="n2">
+                </div>
+            </div>
 
         </div>
         <div class="container">
