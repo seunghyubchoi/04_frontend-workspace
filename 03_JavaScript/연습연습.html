@@ -58,7 +58,7 @@
     <button onclick="testConfirm();" id="hidden_btn" style="display: none;">까꿍이 버튼</button>
 
     <button onclick="change_text();" style="display: block;">바꾸려면 버튼을 누르세요</button>
-    
+
     <script>
         function change_text() {
             var change = document.getElementById("box_text");
@@ -68,28 +68,66 @@
             change.style.color = "red";
 
             var addImg = document.getElementById("box_image");
-            addImg.style.backgroundImage="url(2222.jpg)";
-            addImg.style.backgroundRepeat="no-repeat";
-            addImg.style.width="300px";
-            addImg.style.height="300px";
-            addImg.style.backgroundSize="100% 100%";
+            addImg.style.backgroundImage = "url(2222.jpg)";
+            addImg.style.backgroundRepeat = "no-repeat";
+            addImg.style.width = "300px";
+            addImg.style.height = "300px";
+            addImg.style.backgroundSize = "100% 100%";
 
             var appearBtn = document.getElementById("hidden_btn");
-            appearBtn.style.display="block";
-            appearBtn.style.width="100px";
-            appearBtn.style.height="30px";
+            appearBtn.style.display = "block";
+            appearBtn.style.width = "100px";
+            appearBtn.style.height = "30px";
             // appearBtn.style.backgroundColor="red";
-            appearBtn.style.color="black";
+            appearBtn.style.color = "black";
         }
         function testConfirm() {
             var result = confirm("자바스크립트 재밌니?");
-            if(result) {
+            if (result) {
                 alert("다행이얌");
             } else {
                 alert("포기하면 편해..");
             }
         }
     </script>
+
+    <!-- 230106 -->
+    <script>
+        var clicks = 0;
+        const randomNum = Math.floor(Math.random() * 4 + 1);
+        var arr = ["하지마", "그만누르렴", "졸리다", "주주줌주주말밤"];
+        function itCounts() {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+            if (clicks >= 10) {
+                for (var i = 1; i <= randomNum; i++) {
+                    WarningMsg.innerHTML = arr[i];
+                }
+                // WarningMsg.innerHTML = "그만눌러~";
+            }
+        }
+        
+        function generateRandomNum() {
+            
+        }
+
+
+    </script>
+    <button onclick="itCounts();">click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+    <div id="WarningMsg"></div>
+
 </body>
 
 </html>
+<!-- 
+<script type="text/javascript">
+
+    var clicks = 0;
+    function hello() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+    <button type="button" onclick="hello()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p> -->

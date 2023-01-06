@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제3</title>
+    <style>
+        #resultBox {
+            border: 1px solid rgb(158, 158, 158);
+            width: 300px;
+            height: 100px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML 태그에 접근 테스트</h1>
+    단, 구매자는 태그 이름으로 접근, 상품명은 아이디로 접근, 구매 가격은 name 값으로 접근할 것
+    <br>
+    <br>
+
+    <form action="">
+        <label for="productbuyer">구매자 : </label>
+        <input type="text" placeholder="구매자의 이름을 입력하세요">
+        <br>
+        <br>
+        <label for="productName">상품명 : </label>
+        <input type="text" id="productName" placeholder="구매 상품명을 입력하세요">
+        <br>
+        <br>
+        <label for="price">가격 : </label>
+        <input type="text" name="productPrice" placeholder="구매 가격을 입력하세요.">
+        <br>
+        <br>
+    </form>
+    <button onclick="result();">입력값 출력하기</button>
+    <br>
+    <br>
+    <div id="resultBox"></div>
+    <script>
+        function result() {
+            var resultInBox = document.getElementById("resultBox");
+            var resultTag = document.getElementsByTagName("input");
+            var resultName = document.getElementById("productName");
+            var resultPrice = document.getElementsByName("productPrice");
+
+            resultInBox.innerHTML += "구입자 : " + resultTag[0].value +"<br>";
+            resultInBox.innerHTML += "구입상품 : " + resultName.value+"<br>";
+            resultInBox.innerHTML += "구매가격 : " + resultPrice[0].value + "원 <br>";
+        }
+    </script>
+
+
+</body>
+
+</html>

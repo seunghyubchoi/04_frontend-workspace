@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데이터 입출력</title>
     <style>
-        .area{
+        .area {
             border: 1px solid black;
             width: 300px;
             height: 100px;
@@ -77,11 +77,11 @@
 
             console.log(divEl.innerHTML); // innerHTML : 요소의 content영역 안의 html 태그까지 다 포함
             console.log(divEl.innerText); // innerText : 요소의 content영역 안의 텍스트만 포함(html 태그 x)
-        
+
 
             // 해당 요소의 속성값 변경도 가능 :  속성에 접근 후 대입을 통해 변경
             // divEl.innerHTML = "<b>innerHTML로 속성값 변경함 ㅎㅎ</b>"
-            divEl.innerText = "<b>innerHTML로 속성값 변경함 ㅎㅎ</b>"
+            divEl.innerHTML = "<b>innerHTML로 속성값 변경함 ㅎㅎ</b>"
             divEl.style.backgroundColor = "yellow";
             divEl.style.color = "red";
         }
@@ -109,18 +109,165 @@
 
     <button onclick="testConfirm();">클릭</button>
 
+    <div id="area2">
+
+    </div>
+
     <script>
         function testConfirm() {
             var result = confirm("졸리면 확인, 아니면 취소를 누르세요");
+
+            var divEl = document.getElementById("area2");
+
+
             // console.log(result);
-            if(result) {
-                console.log("정신들채리세요..");
-            }else {
-                console.log("굳~");
+            if (result) {
+                // console.log("정신들채리세요..");
+                divEl.innerHTML = "<h3>정신들체리세요</h3>";
+            } else {
+                // console.log("굳~");
+                divEl.innerHTML = "<h3>굳ㅋ</h3>";
             }
+        }
+
+
+    </script>
+
+    <h3>[window.]prompt("질문내용")</h3>
+    <p>
+        prompt 호출시 "질문내용"과 입력할 수 있는 "텍스트 상자"와
+        "확인/취소" 버튼이 보여지는 알람창 발생 <br>
+        확인 버튼 클릭시 텍스트 상자에 입력되어 있는 값이 문자열로 반환(아무리 숫자가 써 있어도 문자열)
+        취소 버튼 클릭시 null을 반환(글자입력을 했어도 취소를 누르면 무조건 null)
+    </p>
+
+    <button onclick="testPrompt1();">클릭</button>
+    <div id="area3"></div>
+
+    <script>
+        function testPrompt1() {
+            var name = prompt("당신의 이름은 무엇입니까?");
+            var age = prompt("당신의 나이는 몇살입니까?");
+
+            // console.log(name);
+            // console.log(age+29);
+            // console.log(7); 콘솔에 숫자가입력되면 파란색으로 보임 = 숫자가 아닌 문자열
+
+            var divEl = document.getElementById("area3");
+            divEl.innerHTML = "<b>앗, 당신이 바로 " + age + "살 " + name + "님이군요... 반가워영</b>"; ㅂ
         }
     </script>
 
+    <br>
+    <button onclick="testPrompt2();">숫자입력</button>
+
+    <ul id="area4">
+
+    </ul>
+
+    <script>
+        function testPrompt2() {
+            // num 개수만큼 반복문 돌려서 li 만들어줄꺼임
+            /*
+            for(int i = 1; i <= num; i++) {
+                // num 횟수만큼 반복됨
+            }
+            */
+
+            var num = prompt("숫자만을 입력하세요");
+
+            var str = "";
+
+
+            for (var i = 1; i <= num; i++) {
+                str += "<li>목록" + i + "</li>";
+            }
+
+
+            // console.log(str);
+            // var ulEl = document.getElementById("area4");
+            // console.log(ulEl);
+            // ulEl.innerHTML = str;
+
+
+            // 변수 선언 생략 후 한 줄로 줄이기 가능
+            document.getElementById("area4").innerHTML = str;
+        }
+    </script>
+
+    <br>
+    <h3>4) 선택한input요소.value</h3>
+    아이디 : <input type="text" id="userId">
+    <br>
+    비밀번호 : <input type="password" id="userPwd">
+    <br>
+    <button onclick="testInput();">클릭</button>
+
+    <br>
+    <input type="text" name="" id="area5">
+
+    <script>
+        function testInput() {
+            var input1 = document.getElementById("userId");
+            var input2 = document.getElementById("userPwd");
+
+            console.dir(input1);
+            console.dir(input2);
+
+            // console.log(input1.value); // input요소는 value
+            // console.log(input2.value);
+            // console.log(input1);
+
+            var id = input1.value;
+            var pwd = input2.value;
+
+            // input은 innerHTML 대신 value를 사용
+            document.getElementById("area5").value = id + ", " + pwd
+
+            // * 뭐 하다 안 되면 dir 까봐라
+
+            // 클릭 버튼을 누르면 각각의 인풋창이 초기화 됐으면 좋겠다.
+            input1.value="";
+            input2.value="";
+            console.dir(area5);
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </html>

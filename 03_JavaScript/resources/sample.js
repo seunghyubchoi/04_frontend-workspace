@@ -4,5 +4,5 @@ function test() {
 }
 
 function test1() {
-    window.alert("외부파일이랑 연결된 버튼")
+    window.alert("외부파일이랑 연결된 버튼");
 }
