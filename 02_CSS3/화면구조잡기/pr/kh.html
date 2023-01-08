@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kh</title>
+    <style>
+        div,
+        input {
+            box-sizing: border-box;
+            border: 1px solid rgb(159, 159, 159);
+            border-radius: 2px;
+        }
+
+        #wrap {
+            margin: auto;
+            border: none;
+            width: 1000px;
+            height: 800px;
+            padding-top: 10px;
+            padding-bottom: 40px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #header {
+            width: 100%;
+            height: 15%;
+            margin-bottom: 10px;
+        }
+
+        #header_1,
+        #header_3 {
+            border: none;
+            height: 100%;
+            width: 20%;
+            float: left;
+        }
+
+        #header_1_logo {
+            border: none;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #header_1_logo img {
+            position: absolute;
+            width: auto;
+            height: auto;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #header_2 {
+            border: none;
+            height: 100%;
+            width: 60%;
+            float: left;
+
+        }
+
+        #header_2_searchBar {
+            height: 35%;
+            width: 70%;
+            margin: auto;
+            margin-top: 30px;
+
+        }
+
+        #header_2_searchBar_input {
+            border: none;
+            height: 100%;
+            width: 80%;
+            float: left;
+        }
+
+        #header_2_searchBar_input>input {
+            width: 100%;
+            height: 100%;
+        }
+
+        #header_2_searchBar_btn {
+            border: none;
+            height: 100%;
+            width: 20%;
+            float: left;
+        }
+
+        #header_2_searchBar_btn>input {
+            height: 100%;
+            width: 100%;
+        }
+
+        #submit {
+            padding: 5px 25px;
+
+        }
+
+        #navigator {
+            width: 100%;
+            height: 5%;
+            margin-bottom: 10px;
+        }
+
+        #navi {
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+        }
+
+        #navi>li {
+            list-style-type: none;
+            float: left;
+            height: 100%;
+            width: 20%;
+            text-align: center;
+            margin-top: 7px;
+        }
+
+        #navi a {
+            color: rgb(62, 62, 62);
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #navi a:hover {
+            color: rgb(148, 28, 28);
+        }
+
+        #content {
+            border: none;
+            width: 100%;
+            height: 60%;
+            margin-bottom: 10px;
+
+        }
+
+        #content_left {
+            border: none;
+            height: 100%;
+            width: 73%;
+            float: left;
+            margin-right: 19.5px;
+        }
+
+
+
+        #content_left_1 {
+            width: 100%;
+            height: 30%;
+        }
+
+        #content_left_2 {
+            width: 100%;
+            height: 10%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        #content_left_3 {
+            width: 100%;
+            height: 56%;
+
+        }
+
+        #content_left_2_left p {
+            font-size: 13px;
+        }
+
+        #content_left_2_left {
+            border: none;
+            width: 70%;
+            height: 100%;
+            float: left;
+            padding-left: 20px;
+
+        }
+
+        #content_left_2_right {
+            border: none;
+            width: 30%;
+            height: 100%;
+            float: left;
+            padding-top: 13px;
+            padding-left: 80px;
+
+        }
+
+
+        #content_left_1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #content_left_3 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #content_right {
+            border: none;
+            height: 100%;
+            width: 25%;
+            float: left;
+        }
+
+        #content_right_1 {
+            width: 100%;
+            height: 30%;
+            margin-bottom: 10px;
+        }
+
+        #content_right_2 {
+            width: 100%;
+            height: 68%;
+        }
+
+        #content_right_2 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #content_list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        #content_list>li {
+            list-style-type: none;
+            float: left;
+            text-align: center;
+            margin-left: 8px;
+            font-size: 13px;
+        }
+
+        #content_list a {
+
+            color: rgb(62, 62, 62);
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        #login_form {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        #login_form_input {
+            border: none;
+            width: 100%;
+            height: 80%;
+        }
+
+        #login_input_id_pwd {
+            border: none;
+            width: 70%;
+            height: 100%;
+            float: left;
+        }
+
+        #login_input_id_pwd>input {
+            width: 100%;
+            height: 50%;
+            font-size: 13px;
+
+
+        }
+
+        #login_submit_btn {
+            border: none;
+            width: 30%;
+            height: 100%;
+            float: left;
+        }
+
+        #login_submit_btn>input {
+            width: 100%;
+            height: 100%;
+            font-size: 13px;
+
+        }
+
+        #login_form_etc {
+            border: none;
+            width: 100%;
+            height: 20%;
+            text-align: center;
+
+        }
+
+        #login_form_etc a {
+            font-size: 12px;
+            text-decoration: none;
+            color: rgb(62, 62, 62);
+
+        }
+
+        #footer {
+            width: 100%;
+            height: 20%;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        #footer1{
+            border: none;
+            height: 20%;
+            padding-top: 5px;
+            line-height: 20px;
+        }
+        #footer a{
+            margin: 15px;
+        }
+
+        #footer2{
+            border: none;
+            width: 100%;
+            height: 80%;            
+        }
+
+        #p2{
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        #footer2 #p1 {
+            padding-top: 10px;
+            margin-left: 15px;
+        }
+
+        #footer p, #footer a {
+            font-size: 12px;
+            text-decoration: none;
+            color: rgb(62, 62, 62);
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="header_1">
+                <div id="header_1_logo">
+                    <a href="#"><img src="2/image/logo.PNG" alt="kh"></a>
+                </div>
+            </div>
+            <div id="header_2">
+                <form action="" id="header_2_searchBar">
+                    <div id="header_2_searchBar_input">
+                        <input type="text" id="keyword">
+                    </div>
+                    <div id="header_2_searchBar_btn">
+                        <input type="image" src="2/image/search.png" id="submit" name="submit" alt="submit" value="">
+                    </div>
+                </form>
+            </div>
+            <div id="header_3"></div>
+        </div>
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="#">교육과정</a></li>
+                <li><a href="#">교육원소개</a></li>
+                <li><a href="#">취업지원센터</a></li>
+                <li><a href="#">산학연계</a></li>
+                <li><a href="#">상담센터</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="content_left">
+                <div id="content_left_1">
+                    <a href="#"><img src="2/image/banner.PNG" alt=""></a>
+                </div>
+                <div id="content_left_2">
+                    <div id="content_left_2_left">
+                        <p>안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다.</p>
+                    </div>
+                    <div id="content_left_2_right">
+                        <ul id="content_list">
+                            <li><a href="#">경제</a></li>
+                            <li><a href="#">연예</a></li>
+                            <li><a href="#">사회</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="content_left_3">
+                    <a href="#"><img src="2/image/car.PNG" alt=""></a>
+                </div>
+            </div>
+            <div id="content_right">
+                <div id="content_right_1">
+                    <div id="login_form">
+                        <form action="" id="login_form_input">
+                            <div id="login_input_id_pwd">
+                                <input type="text" name="userId" id="input_id" placeholder="아이디를 입력하세요 ">
+                                <input type="password" name="userPwd" id="input_pwn" placeholder="비밀번호를 입력하세요 ">
+                            </div>
+                            <div id="login_submit_btn">
+                                <input type="submit" name="submit" value="로그인">
+                            </div>
+
+                        </form>
+
+                        <div id="login_form_etc">
+                            <a href="#">아이디</a> |
+                            <a href="#">비밀번호</a> |
+                            <a href="#">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="content_right_2">
+                    <a href="#"><img src="2/image/shopping.PNG" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer1">
+                <a href="#">이용약관</a> |
+                <a href="#">개인정보취급방침</a> |
+                <a href="#">인재채용</a> |
+                <a href="#">고객센터</a>             
+            </div>
+            <div id="footer2">
+                <p id="p1">
+                    강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 뚱보빌딩 2F, 3F, 4F, 5F, 6F<br>
+                    강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 나랑드사이다 빌딩 4F, 5F, 7F<br>
+                    강남지원 3관 : 서울특별시 강남구 테헤란로 130 지리산빌딩 5F, 6F <br>
+                </p>
+                <p id="p2">
+                    Copyright © 1993-2023 Siyeon Information Educational Institute All Right Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
