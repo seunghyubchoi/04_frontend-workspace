@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="firstVal">
+        첫번째 값 : <input type="text" id="val1">
+    </div>
+    <div id="secondVal">
+        두번째 값 : <input type="text" id="val2">
+    </div>
+    <input type="button" id="add" value="+" onclick="calculator(this.value);">
+    <input type="button" id="sub" value="-" onclick="sub();">
+    <input type="button" id="multi" value="x" onclick="multi();">
+    <input type="button" id="divi" value="/" onclick="divi();">
+    <input type="button" id="mod" value="%" onclick="mod();">
+
+    <div id="result">계산결과: </div>
+    <script>
+        function add(){
+            const val1 = Number(document.getElementById("val1").value);
+            const val2 = Number(document.getElementById("val2").value);
+            document.getElementById("result").innerHTML = val1 + val2; 
+        }
+        function sub(){
+            const val1 = Number(document.getElementById("val1").value);
+            const val2 = Number(document.getElementById("val2").value);
+            document.getElementById("result").innerHTML = val1 - val2; 
+        }
+        function multi(){
+            const val1 = Number(document.getElementById("val1").value);
+            const val2 = Number(document.getElementById("val2").value);
+            document.getElementById("result").innerHTML = val1 * val2; 
+        }
+        function divi(){
+            const val1 = Number(document.getElementById("val1").value);
+            const val2 = Number(document.getElementById("val2").value);
+            document.getElementById("result").innerHTML = val1 / val2; 
+        }
+        function mod(){
+            const val1 = Number(document.getElementById("val1").value);
+            const val2 = Number(document.getElementById("val2").value);
+            document.getElementById("result").innerHTML = val1 % val2;
+            
+        function calculator(val) {
+            switch(val) 
+        }
+            
+        }
+    </script>
+</body>
+
+</html>

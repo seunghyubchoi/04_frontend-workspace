@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lengthBox,
+        #dividedBox {
+            width: 300px;
+            height: 100px;
+            border: 1px solid red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>보기</legend>
+        <input type="text" id="num">
+    </fieldset>
+    <div id="lengthBox"></div>
+    <button onclick="lengthCheck();">확인하기</button>
+    <script>
+        function lengthCheck() {
+            const str = document.getElementById("num").value;
+
+            document.getElementById("lengthBox").innerHTML = "보기의 문자열 길이는 " + str.length + "글자 입니다.";
+        }
+    </script>
+
+
+
+    <fieldset>
+        <legend>보기</legend>
+        <div><p id="str">콜라,사이다,햄버거,피자,한약</p></div>
+    </fieldset>
+
+    <div id="dividedBox"></div>
+    <button onclick="elementCheck();">확인하기</button>
+    <script>
+        function elementCheck() {
+            
+            const dividedStr = document.getElementById("str").innerHTML;
+            console.log(dividedStr);
+            const fruits = dividedStr.split(",");
+            console.log(fruits);
+            console.log(fruits.length);
+            // document.getElementById("dividedBox").innerHTML = fruits[0] + "<br>";
+
+            for(let i = 0; i < fruits.length; i++) {
+                document.getElementById("dividedBox").innerHTML += i+1 + ". " + fruits[i] + "<br>";
+            }
+            
+
+
+        }
+    </script>
+</body>
+
+</html>
