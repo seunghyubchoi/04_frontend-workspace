@@ -48,11 +48,56 @@
         (주로 이벤트 핸들러(이벤트 발생시 실행할 함수) 작성 시 사용)
     </pre>
     <button id="btn">실행확인</button>
+    <button id="btn2">팩토리얼</button>
+    <button id="btn3">인수받고함수로연산</button>
+
     <div id="area2" class="area"></div>
     <script>
         const btn = document.getElementById("btn");
+        const btn2 = document.getElementById("btn2");
         btn.onclick = function () { // 이름이 없어서 직접 호출 불가
             document.getElementById("area2").innerHTML += "이벤트 핸들러를 통해 실행됨 <br>"
+
+            // const square = function (number) {
+            //     return number * number;
+            // }
+
+            function square(number) {
+                return number * number;
+            }
+
+            const x = square(prompt("값을 입력하세요"));
+            area2.innerHTML = "입력 값 : " + x + "<br>";
+
+        }
+
+        btn2.onclick = function () {
+            function factorial(n) {
+                return n < 2 ? 1 : n * factorial(n - 1);
+            }
+            const y = factorial(prompt("값을 입력하세요"));
+            area2.innerHTML += "팩토리얼 결과 : " + y + "<br>";
+        }
+
+        btn3.onclick = function() {
+            const fn = function(x) {
+                return x * x * x;
+            }
+
+            function map(fn, arr) {
+                const result = new Array(arr.length);
+                for(let i = 0; i < arr.length; i++) {
+                    result[i] = fn(arr[i]);
+                }
+                return result;
+            }
+
+            const numbers = new Array();
+            do{
+                let input = prompt("값을 입력하세요");
+                number.push(input);
+            } while (input =! null);
+
         }
     </script>
 
@@ -139,7 +184,7 @@
     <h2>함수의 리턴</h2>
 
     <h3>* 일반적인 값 리턴</h3>
-    
+
     <button onclick="test6();">실행확인</button>
     <div id="area5" class="area"></div>
     <script>
