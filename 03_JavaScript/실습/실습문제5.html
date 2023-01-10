@@ -16,50 +16,41 @@
         두번째 값 : <input type="text" id="val2">
     </div>
     <input type="button" id="add" value="+" onclick="calculator(this.value);">
-    <input type="button" id="sub" value="-" onclick="sub();">
-    <input type="button" id="multi" value="x" onclick="multi();">
-    <input type="button" id="divi" value="/" onclick="divi();">
-    <input type="button" id="mod" value="%" onclick="mod();">
+    <input type="button" id="sub" value="-" onclick="calculator(this.value);">
+    <input type="button" id="multi" value="*" onclick="calculator(this.value);">
+    <input type="button" id="divi" value="/" onclick="calculator(this.value);">
+    <input type="button" id="mod" value="%" onclick="calculator(this.value);">
 
     <div id="result">계산결과: </div>
     <script>
-        function add(){
-            const val1 = Number(document.getElementById("val1").value);
-            const val2 = Number(document.getElementById("val2").value);
-            document.getElementById("result").innerHTML = val1 + val2; 
-        }
-        function sub(){
-            const val1 = Number(document.getElementById("val1").value);
-            const val2 = Number(document.getElementById("val2").value);
-            document.getElementById("result").innerHTML = val1 - val2; 
-        }
-        function multi(){
-            const val1 = Number(document.getElementById("val1").value);
-            const val2 = Number(document.getElementById("val2").value);
-            document.getElementById("result").innerHTML = val1 * val2; 
-        }
-        function divi(){
-            const val1 = Number(document.getElementById("val1").value);
-            const val2 = Number(document.getElementById("val2").value);
-            document.getElementById("result").innerHTML = val1 / val2; 
-        }
-        function mod(){
-            const val1 = Number(document.getElementById("val1").value);
-            const val2 = Number(document.getElementById("val2").value);
-            document.getElementById("result").innerHTML = val1 % val2;
-            
+
         function calculator(val) {
             const val1 = Number(document.getElementById("val1").value);
             const val2 = Number(document.getElementById("val2").value);
-            switch(id)  {
-                case 1:
-                id == "add";
+            switch(val)  {
+                case "+":
                 document.getElementById("result").innerHTML = val1 + val2;
+                break;
+
+                case "-":
+                document.getElementById("result").innerHTML = val1 - val2;
+                break;
+
+                case "*":
+                document.getElementById("result").innerHTML = val1 * val2;
+                break;
+
+                case "/":
+                document.getElementById("result").innerHTML = val1 / val2;
+                break;
+
+                case "%":
+                document.getElementById("result").innerHTML = val1 % val2;
                 break;
             }
         }
             
-        }
+        
     </script>
 </body>
 
