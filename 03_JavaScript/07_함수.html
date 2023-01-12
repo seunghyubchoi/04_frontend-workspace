@@ -199,6 +199,20 @@
             area5.innerHTML = "랜덤값 : " + ran() + "<br>";
         }
     </script>
+
+    <h3>* 익명함수 값 리턴</h3>
+
+    이름 : <input type="text" id="userName" placeholder="이름을 입력하세요">
+    <button onclick="test7()();">실행확인</button>
+    <script>
+        function test7() {
+            let inputEl = document.getElementById("userName");
+            return function(){
+                alert(inputEl.value);
+            };
+        }
+        
+    </script>
 </body>
 
 </html>

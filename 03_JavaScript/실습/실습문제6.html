@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>보기</legend>
+        <label id="la1">사과, 바나나, 당근</label><br>
+        <label id="la2">김밥, 치즈, 떡볶이, 햄버거</label><br>
+        <label id="la3">환타, 사이다, 콜라</label><br>
+        <label id="la4">고양이, 강아지</label><br>
+    </fieldset>
+    <input type="text" id="inputStr" placeholder="찾을 문자열을 입력하세요.">
+    <button onclick="test1();">전송 및 처리</button>
+    <script>
+        function test1() {
+            let arr = [];
+
+            const inputStr = document.getElementById("inputStr").value;
+            let la1 = document.getElementById("la1").innerHTML;
+            let la2 = document.getElementById("la2").innerHTML;
+            let la3 = document.getElementById("la3").innerHTML;
+            let la4 = document.getElementById("la4").innerHTML;
+
+            let food = la1.split(", ");
+            food += "," + la2.split(", ");
+            food += "," + la3.split(", ");
+            food += "," + la4.split(", ");
+            console.log(typeof (food));
+            let food2 = food.split(",");
+            console.log(food2);
+            
+
+            let index = food2.indexOf(inputStr);
+
+            if (index == -1) {
+                alert(inputStr +"은 없습니다.");
+            } else {
+                alert(inputStr +"은(는) 배열 index" + index + "번째에 존재합니다.");
+            }
+        }
+    </script>
+</body>
+
+</html>
