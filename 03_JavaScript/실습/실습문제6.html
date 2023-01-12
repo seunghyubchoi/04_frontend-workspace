@@ -22,27 +22,22 @@
         function test1() {
             let arr = [];
 
+            // 입력 한 값
             const inputStr = document.getElementById("inputStr").value;
-            let la1 = document.getElementById("la1").innerHTML;
-            let la2 = document.getElementById("la2").innerHTML;
-            let la3 = document.getElementById("la3").innerHTML;
-            let la4 = document.getElementById("la4").innerHTML;
 
-            let food = la1.split(", ");
-            food += "," + la2.split(", ");
-            food += "," + la3.split(", ");
-            food += "," + la4.split(", ");
-            console.log(typeof (food));
-            let food2 = food.split(",");
-            console.log(food2);
+            let la = document.getElementById("la1").innerHTML + ", "
+                + document.getElementById("la2").innerHTML + ", "
+                + document.getElementById("la3").innerHTML + ", "
+                + document.getElementById("la4").innerHTML;
+
+            let word = la.split(", ");
             
-
-            let index = food2.indexOf(inputStr);
+            let index = word.indexOf(inputStr);
 
             if (index == -1) {
-                alert(inputStr +"은 없습니다.");
+                alert(inputStr + "은 없습니다.");
             } else {
-                alert(inputStr +"은(는) 배열 index" + index + "번째에 존재합니다.");
+                alert(inputStr + "은(는) 배열 index" + index + "번째에 존재합니다.");
             }
         }
     </script>

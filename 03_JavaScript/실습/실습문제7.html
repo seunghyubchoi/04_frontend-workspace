@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <fieldset>
+        <legend>보기</legend>
+        <label id="stringla1">r b</label><br>
+        <label id="stringla2">e v o l</label><br>
+    </fieldset>
+    <input type="text" id="answer"><button onclick="test2();">처리</button>
+    <script>
+        function test2() {
+
+            let answer = document.getElementById("answer");
+
+            let str = document.getElementById("stringla1").innerHTML.split(" ").reverse();
+            let str2 = document.getElementById("stringla2").innerHTML.split(" ").reverse();
+            str = str.concat(str2);
+            
+            while(str.length!=0){
+                let ch = str.shift();
+                answer.value+=ch;
+            }
+
+        }
+    </script>
 </body>
+
 </html>

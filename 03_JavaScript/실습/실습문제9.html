@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input{
+            width: 500px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <fieldset>
+        <legend>보기</legend>
+        <p id="wordList">피자 치킨 당근 햄버거 떡볶이</p>
+
+    </fieldset>
+    <input type="text" id="deleteWord" placeholder="삭제할 음식 이름을 입력하세요">
+    <input type="text" id="addWord" placeholder="추가할 음식 이름을 입력하세요">
+    <input type="text" id="answer">
+    <button onclick="test5();">처리 및 출력</button>
+    <script>
+        let wordList = document.getElementById("wordList").innerHTML;
+        wordList = wordList.split(" ");
+
+        function deleting(deleteWord) {
+            let index = wordList.indexOf(deleteWord);
+            return index;
+
+        }
+
+        function adding(addWord) {
+            wordList.push(addWord);
+            return wordList
+        }
+
+        function test5() {
+            let deleteWord = document.getElementById("deleteWord").value;
+            wordList.splice(deleting(deleteWord), 1);
+            let addWord = document.getElementById("addWord").value;
+            adding(addWord);
+            let answer = document.getElementById("answer");
+            answer.value = wordList;
+        }
+    </script>
 </body>
+
 </html>
