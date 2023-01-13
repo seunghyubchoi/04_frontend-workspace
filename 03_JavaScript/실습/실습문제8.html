@@ -20,12 +20,34 @@
         function test3() {
             let words = document.getElementById("words").value;
             arr.push(words);
+            // 나도 여기다 적은 거 초기화 시켜줬어야함
         }
 
         function test4() {
             let answer = document.getElementById("answer");
             answer.value += arr;
         }
+
+
+        // 선생님꺼
+        function test() {
+            let arr = [];
+            let input1 = document.getElementById("input1");
+            let answer = document.getElementById("answer");
+            arr.push(input1.value);
+            input1.value="";
+            answer.innerHTML = arr.toString();
+
+
+
+
+
+
+
+
+        }
+
+
     </script>
 </body>
 

@@ -15,7 +15,33 @@
         <label id="stringla2">e v o l</label><br>
     </fieldset>
     <input type="text" id="answer"><button onclick="test2();">처리</button>
+    <!-- 선생님 input 아니고 div로 줬음 -->
+    <div id="answer2">이 부분에 정답뭐시기 저시기</div>
     <script>
+
+        // 선생님꺼
+        // let str = "";
+        // str = document.getElementById("stringla1").innerHTML;
+        // let arr1 = str.split(" ")
+        // arr1.reverse();
+
+        // str = document.getElementById("stringla1").innerHTML;
+        // let arr2 = str.split(" ")
+        // arr2.reverse();
+
+        // const answer = document.getElementById("answer");
+
+        // answer.innerHTML = "";
+        // for (let i in arr1) {
+        //     answer.innerHTML += arr1[i];
+        // }
+        // for (let i in arr2) {
+        //     answer.innerHTML += arr2[i];
+        // }
+
+
+        // 
+
         function test2() {
 
             let answer = document.getElementById("answer");
@@ -23,10 +49,10 @@
             let str = document.getElementById("stringla1").innerHTML.split(" ").reverse();
             let str2 = document.getElementById("stringla2").innerHTML.split(" ").reverse();
             str = str.concat(str2);
-            
-            while(str.length!=0){
+
+            while (str.length != 0) {
                 let ch = str.shift();
-                answer.value+=ch;
+                answer.value += ch;
             }
 
         }

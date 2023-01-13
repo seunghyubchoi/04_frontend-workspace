@@ -27,6 +27,8 @@
         let wordList = document.getElementById("wordList").innerHTML;
         wordList = wordList.split(" ");
 
+        // 여기를 하나로 이어줄 수 있었음ㅎ
+
         function deleting(deleteWord) {
             let index = wordList.indexOf(deleteWord);
             return index;
@@ -46,6 +48,45 @@
             let answer = document.getElementById("answer");
             answer.value = wordList;
         }
+
+
+/*
+        // 선생님꺼
+        function test() {
+            // div요소 선택 = 나는 div 없음
+            let divEl = document.getElementById("result"); // 나는 answer였음
+
+            // 음식담을 변수
+            let wordList = document.getElementById("wordList").innerHTML.split(" ");
+
+            // 입력 받을 값들을 담을 변수
+            let delItem = document.getElementById("deleteWord").value;
+            let addItem = document.getElementById("addWord").value;
+
+            // 삭제할 음식의 인덱스를 담을 변수
+            let index = wordList.indexOf(delItem);
+
+            // splice
+            wordList.splice(index,1);
+
+            // 추가할 음식 마지막에 추가
+            }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
     </script>
 </body>
 

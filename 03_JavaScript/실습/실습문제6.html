@@ -11,27 +11,45 @@
 <body>
     <fieldset>
         <legend>보기</legend>
-        <label id="la1">사과, 바나나, 당근</label><br>
-        <label id="la2">김밥, 치즈, 떡볶이, 햄버거</label><br>
-        <label id="la3">환타, 사이다, 콜라</label><br>
-        <label id="la4">고양이, 강아지</label><br>
+        <!-- !!!!!!!!!!!!!!!!!!!! 선생님은 , 뒤에 공백 없음 !!!!!!!!!!!!!!!!!-->
+        <label id="la1">사과,바나나,당근</label><br>
+        <label id="la2">김밥,치즈,떡볶이,햄버거</label><br>
+        <label id="la3">환타,사이다,콜라</label><br>
+        <label id="la4">고양이,강아지</label><br>
     </fieldset>
     <input type="text" id="inputStr" placeholder="찾을 문자열을 입력하세요.">
     <button onclick="test1();">전송 및 처리</button>
     <script>
         function test1() {
-            let arr = [];
+            // 선생님 꺼
+            // 인풋 박스 내용물
+            const findInput = document.getElementById("inputStr");
+            let str = "";
+            for (let i = 1; i <= 4; i++) {
+                str += document.getElementById("la" + i).innerHTML;
+                str += ",";
+                // console.log(str); : 사과,바나나,당근,김밥,치즈,떡볶이,햄버거,환타,사이다,콜라,고양이,강아지,
+            }
 
-            // 입력 한 값
+            const foods = str.split(",");
+            foods.pop();
+            let index1 = foods.indexOf(findInput.value);
+            if(index1 == -1) {
+                alert("존재하지 않습니다.");
+            } else {
+                alert(findInput.value + "은(는) 배열 index" + index1 + "번째에 존재합니다.");
+            }
+
+            /*
+            //내가 한거
             const inputStr = document.getElementById("inputStr").value;
-
             let la = document.getElementById("la1").innerHTML + ", "
                 + document.getElementById("la2").innerHTML + ", "
                 + document.getElementById("la3").innerHTML + ", "
                 + document.getElementById("la4").innerHTML;
 
             let word = la.split(", ");
-            
+
             let index = word.indexOf(inputStr);
 
             if (index == -1) {
@@ -39,6 +57,7 @@
             } else {
                 alert(inputStr + "은(는) 배열 index" + index + "번째에 존재합니다.");
             }
+            */
         }
     </script>
 </body>
