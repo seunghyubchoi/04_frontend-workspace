@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <form action="">
+
+            * 아이디 : <input type="text" name="userId" id="userId">
+            <br> <br>
+            * 비밀번호 : <input type="password" name="userPwd1" id="userPwd1">
+            <br> <br>
+            * 비밀번호 확인 : <input type="password" name="userPwd2" id="userPwd2">
+            <br> <br>
+            * 이름 : <input type="text" name="userName" id="userName">
+            <br> <br>
+            * 이메일 : <input type="text" name="email" id="email">
+            <br> <br>
+            * 취미 : <input type="text" name="hobby" id="hobby" list="hobbyList" placeholder="축구, 농구, 야구, 독서 등">
+            <datalist id="hobbyList">
+                <option value="축구"></option>
+                <option value="농구"></option>
+                <option value="야구"></option>
+                <option value="독서"></option>
+            </datalist>
+            <br> <br>
+            * 거주지 : <select name="address" id="address">
+                <option value="서울">서울</option>
+                <option value="인천">인천</option>
+                <option value="부산">부산</option>
+            </select>
+            <br> <br>
+            <input type="submit" value="회원가입" onclick="return validate();">
+            <input type="reset" value="취소">
+            <br> <br>
+        </form>
+        <script>
+            function validate() {
+                const userId = document.getElementById("userId").value;
+                const userPwd1 = document.getElementById("userPwd1").value;
+                const userPwd2 = document.getElementById("userPwd2").value;
+                const userName = document.getElementById("userName").value;
+                const email = document.getElementById("email").value;
+
+                const regExpId = /^[a-z][a-z0-9]{4,12}$/i;
+                // if(regExpId.test(userId)) {
+                //     alert("올바른 입력");
+                // } else {
+                //     alert("틀린 입력");
+                // }
+                let regExpPwd1 = /^.{8,15}$/;
+                // const userPwd1 = prompt("비밀번호");
+                // if (regExpPwd1.test(userPwd1)) {
+                //     alert("굿 " + userPwd1 + "쓰");
+                // } else {
+                //     alert("ㄴㄴ");
+                // }
+                if(userPwd1 != userPwd2) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                    return false;
+                }
+                let regExpName = /^[가-힣]{2,}$/;
+                if(regExpName.test(userName)){
+                    alert("굿");
+                } else {
+                    alert("베드");
+                }
+                let regExpEmail = /^[a-zA-Z0-9]@[a-z]$/;
+            }
+        </script>
+    </fieldset>
+
+</body>
+
+</html>
