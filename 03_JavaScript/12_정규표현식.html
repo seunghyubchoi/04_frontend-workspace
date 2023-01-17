@@ -128,7 +128,7 @@
 
             regExp = /^j.+x$/; // jx사이에 엔터 제외 어떤 문자든 올 수 있음 
             area2.innerHTML += "/^j.+x$/ : " + regExp.test(str) + "<br>";
-            area2.innerHTML += "/^j.+x$/ : " + str.replace(regExp, "(***)") + "<br>";
+            area2.innerHTML += "/^j.+x$/ : " + str.replace(regExp, "(***)") + "<hr>";
 
             // 시작부터 끝까지 오로지 숫자로만 이뤄져야 하는 경우
             // 개수는 상관없음, 단, 적어도 한 글자 이상
@@ -140,15 +140,14 @@
             // 개수는 상관없음, 단, 적어도 한 글자 이상
             regExp = /^[a-zA-Z]+$/;
             area2.innerHTML += "/^[a-zA-Z]+$/ : " + regExp.test("javascript") + "<br>";
-            area2.innerHTML += "/^[a-zA-Z]+$/ : " + regExp.test("asd123@#$45") + "<br>";
+            area2.innerHTML += "/^[a-zA-Z]+$/ : " + regExp.test("asd123@#$45") + "<hr>";
 
             // 시작부터 끝까지 오로시 한글로만 이뤄져야 하는 경우
             // 자음, 모음, 결합
             // 개수 상관 없음, 단, 적어도 한 글자 이상
-
             regExp = /^[ㄱ-ㅎㅏ-ㅣ가-힣]+$/;
             area2.innerHTML += "/^[ㄱ-ㅎㅏ-ㅣ가-힣]$/ : " + regExp.test("거완전ㄹㅇㅋㅋ") + "<br>";
-            area2.innerHTML += "/^[ㄱ-ㅎㅏ-ㅣ가-힣]$/ : " + regExp.test("가s나1다!") + "<br>";
+            area2.innerHTML += "/^[ㄱ-ㅎㅏ-ㅣ가-힣]$/ : " + regExp.test("가s나1다!") + "<hr>";
 
             // 이름 정규표현식 2글자 이상 결합
             regExp = /^[가-힣]{2,}$/;
@@ -189,18 +188,18 @@
             }
             */
             /*
-             const str = "Javascript jQuery Ajax";
-             let regExp = /a/;
- 
-             console.log("/a/ : " + str.replace(regExp, "(***)"));
- 
-             // 모든 a를 바꾸고 싶다면? 전역으로 다 찾아서 변경
-             regExp = /a/g;
-             console.log("/a/g : " + str.replace(regExp, "(***)"));
- 
-             // 대문자까지 전부 다
-             regExp = /a/ig;
-             console.log("/a/ig : " + str.replace(regExp, "(***)"));
+            const str = "Javascript jQuery Ajax";
+            let regExp = /a/;
+
+            console.log("/a/ : " + str.replace(regExp, "(***)"));
+
+            // 모든 a를 바꾸고 싶다면? 전역으로 다 찾아서 변경
+            regExp = /a/g;
+            console.log("/a/g : " + str.replace(regExp, "(***)"));
+
+            // 대문자까지 전부 다
+            regExp = /a/ig;
+            console.log("/a/ig : " + str.replace(regExp, "(***)"));
              */
 
             const str = "Javascript\nJQuery\nAjax";
