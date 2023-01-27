@@ -43,6 +43,7 @@
     <div id="tagBox">
         <input type="text" id="tagInput">
         <ul id="tagList"></ul>
+        
     </div>
     <script>
         $(function () {
@@ -55,7 +56,7 @@
             })
 
             $("#tagList>li").on("click", "li", function() {
-                
+                $(this).remove();
             })
         })
     </script>
