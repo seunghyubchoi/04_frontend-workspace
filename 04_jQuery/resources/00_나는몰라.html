@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <style>
+        #tagBox {
+            border: 1px solid red;
+            height: 100px;
+            width: 100%;
+        }
+
+        #tagList>li {
+            display: inline;
+            width: 50px;
+            border: 1px solid rebeccapurple;
+            margin-right: 10px;
+            padding: 5px 30px;    
+            border-radius: 10px;
+        }
+
+        #tagList>li:hover{
+           
+            background-color: black;
+            color: white;
+            opacity: 0.7;
+            
+        }
+        #tagList>li:hover::after{
+            content: none;
+            
+        }
+       
+        
+            
+
+    </style>
+</head>
+<body>
+    <div id="tagBox">
+        <input type="text" id="tagInput">
+        <ul id="tagList"></ul>
+    </div>
+    <script>
+        $(function () {
+            $("#tagInput").keydown(function (key) {
+                let bValue = $("#tagInput").val()
+                if (key.keyCode == 13) {
+                    // alert(bValue)
+                    $("#tagList").append("<li>" + bValue + "</li");
+                }
+            })
+
+            $("#tagList>li").on("click", "li", function() {
+                
+            })
+        })
+    </script>
+</body>
+</html>

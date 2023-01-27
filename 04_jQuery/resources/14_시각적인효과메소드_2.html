@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <h3>* fadeIn()과 fadeOut(), fadeToggle()</h3>
+    <p style="background-color: red; opacity: 0.5;">선택된 요소가 점점 투명해지면서 사라지고 점점 선명해지면서 보여지게 해주는 메소드</p>
+
+    <button onclick="test1();">숨기기</button>
+    <button onclick="test2();">보여주기</button>
+    <button onclick="test3();">토글</button>
+
+    <br><br>
+    <img id="gamza" src="https://s3.orbi.kr/data/file/united2/1b2a9d6e903242198eeb53176d851fcb.jpeg" alt="">
+    
+    <script>
+        function test1(){
+            $("#gamza").fadeOut(1000);
+        }
+        function test2() {
+            $("#gamza").fadeIn(1000);
+        }
+        function test3() {
+            $("#gamza").fadeToggle(1000);
+        }
+    </script>
+
+
+
+
+</body>
+</html>
