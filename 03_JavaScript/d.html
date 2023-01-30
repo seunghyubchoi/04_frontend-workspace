@@ -61,10 +61,12 @@
         }
         function validate() {
             let area = document.getElementsByName("area");
+            
             let areaResult = null;
             for (let i = 0; i < area.length; i++) {
                 if (area[i].checked == true) {
                     areaResult = area[i].value;
+                    console.log(areaResult);
                 }
             }
 
@@ -72,7 +74,7 @@
                 alert("지역을 선택해주세요.");
                 return false;
             }
-
+            
         }
 
     </script>
