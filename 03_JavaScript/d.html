@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <fieldset>
+        <form action="insert.me" method="get">
+            <legend>회원 가입 양식</legend>
+            <table>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" id="userId"></td>
+                    <td><input type="button" value="중복확인" onclick="idCheck();"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호확인</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td>지역</td>
+                    <td>
+                        서울<input type="radio" name="area" value="seoul">
+                        부산<input type="radio" name="area" value="busan">
+                        대구<input type="radio" name="area" value="daegu">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                        <input type="reset" value="초기화">
+                        <input type="submit" value="회원가입" onclick="return validate();">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+
+    <script>
+        function idCheck() {
+            const idInput = document.getElementById("userId");
+            let regExp = /^[a-z][\d!@#]{5,11}$/;
+            if (!regExp.test(idInput.value)) {
+                userId.style.backgroundColor = "red";
+
+            } else {
+                userId.style.backgroundColor = "green";
+            }
+
+
+        }
+        function validate() {
+            let area = document.getElementsByName("area");
+            let areaResult = null;
+            for (let i = 0; i < area.length; i++) {
+                if (area[i].checked == true) {
+                    areaResult = area[i].value;
+                }
+            }
+
+            if (areaResult == null) {
+                alert("지역을 선택해주세요.");
+                return false;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
